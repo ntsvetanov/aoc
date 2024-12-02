@@ -5,9 +5,9 @@ def read_input(data_path):
     return data
 
 
-def read_integer_columns(data_path):
+def read_integer_columns(data_path, separator="   "):
     with open(data_path, "r") as file:
-        return [tuple(map(int, row.split("   "))) for row in file]
+        return [tuple(map(int, row.split(separator))) for row in file]
 
 
 def count_values(data):
